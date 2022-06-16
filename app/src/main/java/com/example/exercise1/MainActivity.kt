@@ -12,9 +12,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.material.Button
+import androidx.compose.ui.Alignment.Companion.Center
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.exercise1.ui.theme.InstantSOStheme
 import com.example.exercise1.ui.theme.Orange500
 import com.example.exercise1.ui.theme.Purple200
@@ -67,65 +72,66 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun eksempel1() {
 
-    Column() {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .absolutePadding(10.dp, 50.dp, 10.dp, 0.dp), horizontalAlignment = Alignment.CenterHorizontally){
 
-        Box(contentAlignment = Alignment.Center) {
+         Text(text = "Tryk på knap ud fra niveau af akutsituation", fontSize = 17.sp, fontWeight = FontWeight.Bold)
+
+
+
+        Spacer(modifier = Modifier.height(60.dp))
+        Box() {
             Button(
                 onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = androidx.compose.ui.graphics.Color.Red
+                colors = ButtonDefaults.buttonColors(backgroundColor = androidx.compose.ui.graphics.Color.Red),
+                modifier = Modifier
+                    .height(120.dp)
+                    .width(240.dp)
                 )
-            ) {
+             {
                 Text(
-                    text = "HEJ")
-                Modifier.padding(12.dp)
-            }
-        }
-
-        Box(contentAlignment = Alignment.Center) {
-            Button(
-                onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = Orange500
-                )
-            ) {
-                Text(
-                    text = "HEJ")
+                    text = "Nødknap 1", fontSize = 20.sp)
                 Modifier.padding(12.dp)
 
             }
         }
-
-        Box(contentAlignment = Alignment.Center) {
+        Spacer(modifier = Modifier.height(40.dp))
+        Box() {
             Button(
                 onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = androidx.compose.ui.graphics.Color.Yellow
+                colors = ButtonDefaults.buttonColors(backgroundColor = Orange500),
+                modifier = Modifier
+                    .height(120.dp)
+                    .width(240.dp)
                 )
+                {
+                Text(
+                    text = "Nødknap 2", fontSize = 20.sp)
+                Modifier.padding(12.dp)
+
+            }
+        }
+        Spacer(modifier = Modifier.height(40.dp))
+        Box() {
+            Button(
+                onClick = { /*TODO*/ },
+                colors = ButtonDefaults.buttonColors(backgroundColor = androidx.compose.ui.graphics.Color.Yellow),
+                modifier = Modifier
+                    .height(120.dp)
+                    .width(240.dp)
             ) {
                 Text(
-                    text = "HEJ")
-                Modifier.padding(12.dp)
+                    text = "Nødknap 3", fontSize = 20.sp)
+                Modifier.padding(40.dp)                 
 
             }
         }
 
     }
 
-    Box(contentAlignment = Alignment.Center) {
-        Button(
-            onClick = { /*TODO*/ },
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = androidx.compose.ui.graphics.Color.Red
-            )
-            ) {
-            Text(
-                text = "HEJ")
-                Modifier.padding(12.dp)
-
-        }
-    }
-
+    
 }
 
     @Composable
