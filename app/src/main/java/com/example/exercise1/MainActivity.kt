@@ -15,6 +15,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.material.Button
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
@@ -28,9 +29,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            baggrund()
-            eksempel1()
-            
+            //Baggrund()
+            //Knapperne()
+            //SignInScreen()
+            //hjaelptilkaldt()
+            //provigen()
+            //modtager()
+            //modtagerAccept()
+            modtagerAfvis()
         }
 
             /*InstantSOStheme() {
@@ -40,19 +46,19 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Button(onClick = { /*TODO*/ }){
-                        
+
                     }
                 }
                // MessageCard("Android")
             }
         }
-        
+
              */
 
 }
 
 @Composable
-fun baggrund(){
+fun Baggrund(){
    Column(
        Modifier
            .background(darkgrey)
@@ -66,7 +72,7 @@ fun baggrund(){
 
 
 @Composable
-fun eksempel1() {
+fun Knapperne() {
 
     Column(
         Modifier
@@ -133,16 +139,21 @@ fun eksempel1() {
     
 }
 
-    @Composable
-    fun MessageCard(name: String) {
-        Text(text = "Hello $name!")
-    }
+@Composable
+fun loginscreen() {
+  
+
+
+}
+
+
+
 @Preview(showBackground = true)
 
 @Composable
 fun PreviewMessageCard() {
     InstantSOStheme() {
-        MessageCard("Android")
+       // MessageCard("Android")
     }
 }}
 

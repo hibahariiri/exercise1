@@ -11,4 +11,4 @@ val Orange500 = Color(0xFFFF781F)
 val darkgrey = Color(0xFF3D3D3D)
 val Hvid = Color(0xFFFFFFFF)
 val Gul = Color(0xFFF6BE00)
-
+val Graa = Color(0xFFA9A9A9)
